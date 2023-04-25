@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        brown: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cec7',
+                            400: '#d2bab0',
+                            500: '#bfa094',
+                            600: '#a18072',
+                            700: '#977669',
+                            800: '#846358',
+                            900: '#43302b',
+                        },
+                        blue: {
+                            850: '#17275c',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+        /* .btn {
+            @apply px-5 py-2 inline-block bg-blue-850 text-white font-medium rounded shadow hover:bg-brown-700 hover:text-black active:bg-clifford active:text-white;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button"
+                            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!--
+                      Icon when menu is closed.
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <!--
+                      Icon when menu is open.
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex flex-shrink-0 items-center">
+                            <img class="block h-8 w-auto lg:hidden"
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                alt="Your Company">
+                            <img class="hidden h-8 w-auto lg:block"
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                alt="Your Company">
+                        </div>
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="index.html"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Bio</a>
+                                <a href="experience.html"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Experience</a>
+                                <a href="https://nayeyar.github.io/" target="_blank"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="index.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
+                    <a href="bio.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                        aria-current="page">Bio</a>
+                    <a href="experience.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Experience</a>
+                    <a href="https://nayeyar.github.io/" target="_blank"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Portfolio</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+            <div class="absolute inset-0 -z-10 overflow-hidden">
+                <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                    aria-hidden="true">
+                    <defs>
+                        <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1"
+                            patternUnits="userSpaceOnUse">
+                            <path d="M100 200V.5M.5 .5H200" fill="none" />
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            stroke-width="0" />
+                    </svg>
+                    <rect width="100%" height="100%" stroke-width="0"
+                        fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+                </svg>
+            </div>
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                <div
+                    class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                    <div class="lg:pr-4">
+                        <div class="lg:max-w-lg">
+                            <p class="text-base font-semibold leading-7 text-indigo-600">About Me</p>
+                            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Software
+                                Engineer</h1>
+                            <p class="mt-6 text-xl leading-8 text-gray-700">As a creative and innovative software
+                                engineer, I am passionate about pushing the boundaries of what is possible with
+                                technology. With a strong foundation in computer science and extensive experience in
+                                software development, I am constantly seeking new and innovative ways to solve complex
+                                problems and create cutting-edge solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                    <video
+                        class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+                        src="media/pexels-bedrijfsfilmspecialistnl-2887463-1920x1080-25fps.mp4" autoplay loop
+                        muted></video>
+                </div>
+                <div
+                    class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                    <div class="lg:pr-4">
+                        <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+                            <p>
+                            <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                                <li class="flex gap-x-3">
+                                    <svg class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-6 h-6">
+                                        <path fill-rule="evenodd"
+                                            d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 00-3.471 2.987 10.04 10.04 0 014.815 4.815 18.748 18.748 0 002.987-3.472l3.386-5.079A1.902 1.902 0 0020.599 1.5zm-8.3 14.025a18.76 18.76 0 001.896-1.207 8.026 8.026 0 00-4.513-4.513A18.75 18.75 0 008.475 11.7l-.278.5a5.26 5.26 0 013.601 3.602l.502-.278zM6.75 13.5A3.75 3.75 0 003 17.25a1.5 1.5 0 01-1.601 1.497.75.75 0 00-.7 1.123 5.25 5.25 0 009.8-2.62 3.75 3.75 0 00-3.75-3.75z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span><strong class="font-semibold text-gray-900">Creativity:</strong> My creativity
+                                        is reflected in my ability to think outside the box and come up with unique
+                                        approaches to software development challenges. I thrive in dynamic environments
+                                        where I can apply my creative problem-solving skills to develop novel solutions
+                                        that deliver value to end users.</span>
+                                </li>
+                                <li class="flex gap-x-3">
+                                    <svg class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-6 h-6">
+                                        <path fill-rule="evenodd"
+                                            d="M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0112 6.75zM4.117 19.125a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z"
+                                            clip-rule="evenodd" />
+                                        <path
+                                            d="M10.076 8.64l-2.201-2.2V4.874a.75.75 0 00-.364-.643l-3.75-2.25a.75.75 0 00-.916.113l-.75.75a.75.75 0 00-.113.916l2.25 3.75a.75.75 0 00.643.364h1.564l2.062 2.062 1.575-1.297z" />
+                                        <path fill-rule="evenodd"
+                                            d="M12.556 17.329l4.183 4.182a3.375 3.375 0 004.773-4.773l-3.306-3.305a6.803 6.803 0 01-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 00-.167.063l-3.086 3.748zm3.414-1.36a.75.75 0 011.06 0l1.875 1.876a.75.75 0 11-1.06 1.06L15.97 17.03a.75.75 0 010-1.06z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span><strong class="font-semibold text-gray-900">Proficiency:</strong> I am
+                                        proficient in a wide range of programming languages, frameworks, and tools. I
+                                        have a keen eye for detail and strive for clean, efficient, and maintainable
+                                        code. I am skilled in designing robust architectures that are scalable, secure,
+                                        and performant, while always keeping user experience in mind.</span>
+                                </li>
+                                <li class="flex gap-x-3">
+                                    <svg class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-6 h-6">
+                                        <path fill-rule="evenodd"
+                                            d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z"
+                                            clip-rule="evenodd" />
+                                        <path
+                                            d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
+                                    </svg>
+
+                                    <span><strong class="font-semibold text-gray-900">Collaboration:</strong> An
+                                        essential aspect of my approach to software development. I believe in fostering
+                                        a collaborative and inclusive work environment where ideas can be freely shared
+                                        and discussed. I work seamlessly with cross-functional teams, including product
+                                        managers, designers, and quality assurance, to ensure that the final software
+                                        product meets the needs of end users and exceeds their expectations.</span>
+                                </li>
+                            </ul>
+                            <p class="mt-8">A strong believer in innovation who constantly stay updated with the latest
+                                advancements in technology, industry trends, and best practices to ensure that my
+                                software solutions are at the forefront of innovation. I am not afraid to experiment
+                                with new technologies and methodologies to push the boundaries of what can be achieved.
+                            </p>
+                            <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Summary
+                            </h2>
+                            <p class="mt-6">As a creative and innovative software engineer, I bring a unique perspective
+                                to software development, constantly striving to push the boundaries of what is possible.
+                                With my strong technical skills, passion for innovation, and collaborative mindset, I am
+                                dedicated to creating software solutions that are not only functional but also
+                                user-friendly, scalable, and at the forefront of technological advancements.</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
